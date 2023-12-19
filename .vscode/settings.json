@@ -1,0 +1,19 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "always"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "json",
+    "jsonc",
+    "json5",
+    "yaml"
+  ],
+  "eslint.experimental.useFlatConfig": true,
+  "cSpell.words": ["uncategorized"]
+}

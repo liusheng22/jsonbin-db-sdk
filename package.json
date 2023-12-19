@@ -1,0 +1,27 @@
+{
+  "name": "jsonbin-db-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\"",
+    "tsc": "tsc --watch --project tsconfig.json",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist build"
+  },
+  "dependencies": {
+    "node-json-db": "^2.3.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@sujian/eslint-config": "^1.0.4",
+    "@types/request": "^2.48.12",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^4.9.4"
+  }
+}
