@@ -18,7 +18,7 @@
     /* Modules */
     "module": "commonjs" /* Specify what module code is generated. */,
     "paths": {
-      "@/*": ["src/*"]
+      "core/*": ["packages/core/*"]
     },
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -108,7 +108,5 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  }
 }
