@@ -15,9 +15,5 @@
     "yaml"
   ],
   "eslint.experimental.useFlatConfig": true,
-  "cSpell.words": [
-    "apikey",
-    "jsonbin",
-    "uncategorized"
-  ]
+  "cSpell.words": ["apikey", "jsonbin", "liusheng", "uncategorized"]
 }
