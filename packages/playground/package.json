@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "dist/index.js",
+  "module": "index.ts",
+  "scripts": {
+    "watch": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\"  \"ts-node index.ts\"",
+    "dev-test": "ts-node index.ts",
+    "node-index": "node dist/index.js",
+    "dev": "concurrently \"tsc -w\" \"tsc-alias -w\" \"npm run node-index\"",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "jsonbin-db-sdk": "workspace:*",
+    "jsonbin-db-shared": "workspace:*",
+    "node-json-db": "^2.3.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "concurrently": "^8.2.2",
+    "tsc-alias": "^1.8.8"
+  }
+}
