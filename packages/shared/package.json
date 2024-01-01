@@ -1,11 +1,19 @@
 {
   "name": "jsonbin-db-shared",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "author": "",
   "license": "ISC",
   "keywords": [],
   "main": "index.ts",
-  "scripts": {}
+  "types": "index.d.ts",
+  "scripts": {
+    "dev": "concurrently \"tsc -w\" \"tsc-alias -w\""
+  },
+  "devDependencies": {
+    "@sujian/eslint-config": "^1.0.4",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
+    "tsc-alias": "^1.8.8"
+  }
 }
