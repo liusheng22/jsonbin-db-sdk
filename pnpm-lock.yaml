@@ -74,7 +74,20 @@ importers:
         specifier: ^1.8.8
         version: registry.npmmirror.com/tsc-alias@1.8.8
 
-  packages/shared: {}
+  packages/shared:
+    devDependencies:
+      '@sujian/eslint-config':
+        specifier: ^1.0.4
+        version: registry.npmmirror.com/@sujian/eslint-config@1.0.4(eslint@8.56.0)(typescript@4.9.4)
+      concurrently:
+        specifier: ^8.2.2
+        version: registry.npmmirror.com/concurrently@8.2.2
+      eslint:
+        specifier: ^8.56.0
+        version: registry.npmmirror.com/eslint@8.56.0
+      tsc-alias:
+        specifier: ^1.8.8
+        version: registry.npmmirror.com/tsc-alias@1.8.8
 
 packages:
 
