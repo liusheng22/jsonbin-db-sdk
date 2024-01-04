@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "module": "commonjs",
     "paths": {
@@ -13,9 +14,9 @@
       "playground/*": ["packages/playground/*"]
     },
     "strict": true,
+    "declaration": true,
     "outDir": "./dist",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
   "include": [""],
