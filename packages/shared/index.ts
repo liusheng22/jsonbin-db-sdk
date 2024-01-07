@@ -1,3 +1,3 @@
-export * from './constants'
-export * from './types'
-
+import * as constants from './constants'
+import * as types from './types'
+export { constants, types }

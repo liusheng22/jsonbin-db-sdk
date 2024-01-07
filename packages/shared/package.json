@@ -5,15 +5,12 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.ts",
-  "types": "index.d.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "concurrently \"tsc -w\" \"tsc-alias -w\""
   },
   "devDependencies": {
-    "@sujian/eslint-config": "^1.0.4",
     "concurrently": "^8.2.2",
-    "eslint": "^8.56.0",
     "tsc-alias": "^1.8.8"
   }
 }
