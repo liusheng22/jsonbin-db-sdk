@@ -11,7 +11,8 @@
       "utils/*": ["packages/core/utils/*"],
       "helper/*": ["packages/core/helper/*"],
       "constants/*": ["packages/core/constants/*"],
-      "playground/*": ["packages/playground/*"]
+      "playground/*": ["packages/playground/*"],
+      "jsonbin-db-shared/*": ["../shared/*"]
     },
     "strict": true,
     "declaration": true,
@@ -19,6 +20,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": [""],
   "exclude": ["node_modules", "dist"]
 }

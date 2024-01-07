@@ -1,9 +1,14 @@
 {
   "name": "@llius/jsonbin-db",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "将jsonbin.org作为数据库，提供增删改查的能力",
   "author": "liusheng",
   "license": "ISC",
+  "homepage": "https://www.npmjs.com/package/@llius/jsonbin-db",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liusheng22/jsonbin-db-sdk/"
+  },
   "keywords": [
     "jsonbin",
     "database",
