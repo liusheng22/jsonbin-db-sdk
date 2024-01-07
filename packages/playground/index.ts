@@ -1,12 +1,4 @@
-import { JsonBinDb } from 'jsonbin-db-sdk'
-import { apikey } from 'jsonbin-db-shared/constants'
-
-const db = new JsonBinDb({
-  username: 'liusheng22',
-  dbName: 'test',
-  apikey
-  // apikey: '8824a895-dafc-4ade-a813-4f79ebba09d4'
-})
+import { db } from './db'
 
 // console.log('header =>', db.getHeader())
 // console.log('getObjectDefault =>', db.getObjectDefault())
@@ -15,14 +7,9 @@ const fn = async () => {
   await db.initBin()
 
   // delete
-  console.log('delete ===>', await db.delete(`.jpr2svp2is9`))
+  // console.log('delete ===>', await db.delete(`.jpr2svp2is9`))
 
-  console.log('getObjectDefault ===>', await db.getObjectDefault(`.`))
-
-  return
-
-  // get index
-  // console.log('getIndex ===>', await db.getIndex(`.list`, 1, 'a'))
+  console.log('getObjectDefault ===>', await db.getObjectDefault(`.`, {}))
 
   // push list
   console.log(
@@ -34,6 +21,9 @@ const fn = async () => {
       { id: 3, a: 4 }
     ])
   )
+
+  // get index
+  console.log('getIndex ===>', await db.getIndex(`.list`, 1, 'a'))
 
   // 随机一个对象的 key
   const randomKey = Math.random().toString(36).slice(2)
