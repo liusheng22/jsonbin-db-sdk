@@ -19,8 +19,7 @@
   },
   "dependencies": {
     "jsonbin-db-sdk": "workspace:*",
-    "jsonbin-db-shared": "workspace:*",
-    "node-json-db": "^2.3.0"
+    "jsonbin-db-shared": "workspace:*"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

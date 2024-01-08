@@ -1,9 +1,6 @@
 import { db } from './db'
 
-// console.log('header =>', db.getHeader())
-// console.log('getObjectDefault =>', db.getObjectDefault())
 const fn = async () => {
-  // TODO: 根据 name 来确认 binId
   await db.initBin()
 
   // delete
