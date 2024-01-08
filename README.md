@@ -19,20 +19,20 @@ pnpm i @llius/jsonbin-db
 
 > 项目使用
 ```javascript
-import { JsonBinDb } from 'jsonbin-db-sdk'
+import { JsonBinDb } from '@llius/jsonbin-db'
 
 // https://jsonbin.org 申请的apikey
-export const db = new JsonBinDb({
-  username: 'liusheng22',
-  dbName: 'test1',
-  apikey
+const db = new JsonBinDb({
+  username: 'YOUR_NAME',
+  dbName: 'CUSTOM_FILE_NAME',
+  apikey: ''
 })
 
 const initDb = async () => {
   await db.initBin()
 
   // 获取所有数据
-  const data = await db.getObjectDefault('.')
+  await db.getObjectDefault('.')
 
   // 存储数据
   await db.push('.list', [
@@ -43,12 +43,12 @@ const initDb = async () => {
   ])
 
   // 获取某个字段的值，如果没获取到，则设置默认值为{}
-  const data = await db.getObjectDefault('.list[0].name', {})
+  await db.getObjectDefault('.list[0].name', {})
 
   // 获取某个 id 的下标
-  await db.getIndex(`.list`, 0)) // output -> 0
+  await db.getIndex(`.list`, 0) // output -> 0
   // 获取某个字段的index
-  await db.getIndex(`.list`, 'test2', 'name')) // output -> 1
+  await db.getIndex(`.list`, 'test2', 'name') // output -> 1
 
   // 删除某个字段
   await db.delete('.list')

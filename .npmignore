@@ -1,0 +1,12 @@
+/packages
+
+.husky
+.vscode
+.editorconfig
+.eslint.config.js
+.eslintignore
+.eslintrc.js
+.gitignore
+.prettierrc.js
+.pnpm-workspace.yaml
+commitlint.config.js
