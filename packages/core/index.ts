@@ -62,7 +62,6 @@ export class JsonBinDb {
   }
 
   public create: () => Promise<any> = async () => {
-    console.log('this.access -->', this.access)
     return await createBin(this)
   }
 
@@ -87,7 +86,6 @@ export class JsonBinDb {
   }
 
   public async push(path: string, data: any, isSave: boolean = true) {
-    console.log('db push', isSave)
-    return await this.localDb.push(path, data)
+    return await this.localDb.push(path, data, isSave)
   }
 }

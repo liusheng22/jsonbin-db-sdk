@@ -34,8 +34,8 @@ export default function (options: RequestOpts): Promise<any> {
         reject(error)
       }
 
-      console.log(`<----- 请求 ${methodType} ${url} ===>`, options)
-      console.log(`-----> 返回 ${methodType} ${url} ===>`, result)
+      // console.log(`<----- 请求 ${methodType} ${url} ===>`, options)
+      // console.log(`-----> 返回 ${methodType} ${url} ===>`, result)
       resolve(result)
     })
   })

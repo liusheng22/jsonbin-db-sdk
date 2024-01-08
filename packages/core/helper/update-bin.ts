@@ -8,7 +8,6 @@ export const updateBin: Props<JsonBinDb, BinData> = async (
   data
 ) => {
   const headers = getHeader()
-  // headers['X-Bin-Name'] = BIN_NAME
   const { username, binKey } = access
   const options = {
     method: 'POST',

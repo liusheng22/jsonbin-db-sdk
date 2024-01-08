@@ -9,7 +9,6 @@ const db = new JsonDB(new Config('/tmp/jsonbin-db.json', true, true, '.'))
 
 export class LocalDb {
   constructor(jsonBinDb: JsonBinDb) {
-    console.log('LocalDb constructor')
     this.jsonBinDb = jsonBinDb
   }
 
