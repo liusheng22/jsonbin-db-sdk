@@ -7,6 +7,8 @@ import { tryCatchAsync } from './try-catch'
 
 const db = new JsonDB(new Config('/tmp/jsonbin-db.json', true, true, '.'))
 
+export type FindCallback = (entry: any, index: number | string) => boolean
+
 export class LocalDb {
   constructor(jsonBinDb: JsonBinDb) {
     this.jsonBinDb = jsonBinDb
@@ -58,6 +60,15 @@ export class LocalDb {
     // 写入到远端
     await updateBin(this.jsonBinDb, allJson)
     return allJson
+  }
+
+  public async find<T>(
+    rootPath: string,
+    callback: FindCallback
+  ): Promise<T | unknown> {
+    await rewriteLocalJson(this.jsonBinDb)
+    const data = await tryCatchAsync(() => db.find(rootPath, callback))
+    return data
   }
 }
 
