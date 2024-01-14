@@ -20,8 +20,7 @@
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
     "build": "cd packages/core && pnpm build",
-    "publish": "pnpm --parallel -r run publish",
-    "clean": "rm -rf dist"
+    "publish": "pnpm --parallel -r run publish"
   },
   "publishConfig": {
     "access": "public",

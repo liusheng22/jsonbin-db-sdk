@@ -11,8 +11,7 @@
       "utils/*": ["packages/core/utils/*"],
       "helper/*": ["packages/core/helper/*"],
       "constants/*": ["packages/core/constants/*"],
-      "playground/*": ["packages/playground/*"],
-      "jsonbin-db-shared/*": ["../shared/*"]
+      "playground/*": ["packages/playground/*"]
     },
     "strict": true,
     "declaration": true,
