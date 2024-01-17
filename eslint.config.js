@@ -4,7 +4,8 @@ const { defineConfig } = require('@sujian/eslint-config')
 module.exports = defineConfig({}, [
   {
     rules: {
-      'import/order': 'off'
+      'import/order': 'off',
+      'prefer-spread': 'off'
     }
   }
 ])
