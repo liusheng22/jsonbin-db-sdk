@@ -12,6 +12,20 @@ export type FindCallback = (entry: any, index: number | string) => boolean
 export class LocalDb {
   constructor(jsonBinDb: JsonBinDb) {
     this.jsonBinDb = jsonBinDb
+
+    return new Proxy(this, {
+      get(target: LocalDb, propKey: string) {
+        if (typeof propKey === 'string' && !(propKey in target)) {
+          target[propKey] = async function (...args: any[]) {
+            await rewriteLocalJson(this.jsonBinDb)
+            // @ts-expect-error 动态调用db中的方法
+            const data = await tryCatchAsync(() => db[propKey].apply(db, args))
+            return data
+          }
+        }
+        return target[propKey]
+      }
+    })
   }
 
   public jsonBinDb: JsonBinDb
@@ -70,6 +84,8 @@ export class LocalDb {
     const data = await tryCatchAsync(() => db.find(rootPath, callback))
     return data
   }
+
+  [key: string]: any
 }
 
 const rewriteLocalJson = async (jsonBinDb: JsonBinDb) => {

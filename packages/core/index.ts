@@ -34,6 +34,25 @@ export class JsonBinDb {
     this.access = access
 
     this.localDb = new LocalDb(this)
+
+    return new Proxy(this, {
+      get(target: JsonBinDb, propKey: string) {
+        const targetPropKey = target[propKey]
+        if (typeof targetPropKey === 'function') {
+          return function (...args: any[]) {
+            if (targetPropKey && typeof targetPropKey === 'function') {
+              return targetPropKey.apply(target, args)
+            } else {
+              return targetPropKey.apply(target, args)
+            }
+          }
+        } else {
+          return function (...args: any[]) {
+            return target.localDb[propKey].apply(target.localDb, args)
+          }
+        }
+      }
+    })
   }
 
   public localDb: LocalDb
@@ -88,4 +107,6 @@ export class JsonBinDb {
   public async push(path: string, data: any, isSave: boolean = true) {
     return await this.localDb.push(path, data, isSave)
   }
+
+  [key: string]: any
 }
