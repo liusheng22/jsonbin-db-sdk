@@ -30,5 +30,8 @@ const fn = async () => {
   )
 
   console.log('getData ===>', await db.getData(`.`))
+
+  // getObject 这是一个没有定义的方法，直接通过 proxy 动态生成
+  console.log('getTestFn1 ===>', await db.getObject(`.`))
 }
 fn()
